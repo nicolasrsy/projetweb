@@ -12,11 +12,8 @@ class View{
     public function generer($data){
         $contenu = $this->genererFic($this->_file, $data);
 
-        $vue = $this->genererFic('vue/template.php', array('t' => $this->_t, 'content' => $contenu));
+        $vue = $this->genererFic('vue/temp.php', array('t' => $this->_t, 'content' => $contenu));
         echo $vue;
-        if(isset($_POST['submit'])){
-            
-        }
     }
 
     private function genererFic($fic, $data){

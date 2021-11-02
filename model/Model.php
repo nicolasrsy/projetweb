@@ -1,6 +1,6 @@
 <?php
 
-abstract class Model{
+class Model{
 
     private static $_bdd;
 
@@ -47,8 +47,5 @@ abstract class Model{
     }
     
 }
-
-
-
 
 ?>

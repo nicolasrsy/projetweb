@@ -69,9 +69,4 @@ class User {
         return $this->_email;
     }
 }
-
-
-
-
-
 ?>

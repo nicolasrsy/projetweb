@@ -28,15 +28,15 @@ class Router{
 				} 
 			}
 			else{
-				require_once('controller/ControllerAccueil.php');
-				$this->ctrl = new ControllerAccueil($url);
+				require_once('controller/ControllerConnexion.php');
+				$this->ctrl = new ControllerConnexion($url);
 			}
 			
 		} catch (\Exception $e){
 			$errMsg = $e->getMessage();
-			$this->_view = new View('Error');
+			/*$this->_view = new View('Error');
 			$this->_view->generer(array('errMsg' =>$errMsg ));
-			require_once('vue/viewError.php');
+			require_once('vue/viewError.php');*/
 		}
 
 

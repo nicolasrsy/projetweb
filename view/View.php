@@ -5,14 +5,14 @@ class View{
     private $_t;
     
     function __construct($action){
-        $this->_file= 'vue/view'.$action.'.php';
+        $this->_file= 'view/view'.$action.'.php';
 
     }
 
     public function generer($data){
         $contenu = $this->genererFic($this->_file, $data);
 
-        $vue = $this->genererFic('vue/temp.php', array('t' => $this->_t, 'content' => $contenu));
+        $vue = $this->genererFic('view/temp.php', array('t' => $this->_t, 'content' => $contenu));
         echo $vue;
     }
 

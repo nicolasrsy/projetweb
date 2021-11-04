@@ -1,5 +1,5 @@
 <?php
-require_once 'vue/View.php';
+require_once 'view/View.php';
 
 
 
@@ -34,9 +34,6 @@ class Router{
 			
 		} catch (\Exception $e){
 			$errMsg = $e->getMessage();
-			/*$this->_view = new View('Error');
-			$this->_view->generer(array('errMsg' =>$errMsg ));
-			require_once('vue/viewError.php');*/
 		}
 
 

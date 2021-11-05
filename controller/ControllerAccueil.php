@@ -1,5 +1,5 @@
 <?php 
-require_once 'vue/View.php';
+require_once 'view/View.php';
 
 class ControllerAccueil{
 
@@ -17,10 +17,10 @@ class ControllerAccueil{
 
 	private function init(){
 		if(isset($_GET['id'])){
-		$this->_model = new Model();
-		$user = $this->_model->getUser('user', 'User', $_GET['id']);
-		$this->_view = new View('Accueil');
-		$this->_view->generer(array('user' => $user ));
+			$this->_model = new Model();
+			$user = $this->_model->getUser('user', 'User', $_GET['id']);
+			$this->_view = new View('Accueil');
+			$this->_view->generer(array('user' => $user ));
 		}
 	}
 }

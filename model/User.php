@@ -7,7 +7,7 @@ class User {
     private $_nom;
     private $_prenom;
     private $_mdp;
-    private $_email;
+    private $_adresse;
 
     public function __construct(array $data){
 
@@ -25,7 +25,13 @@ class User {
     
     public function setIdUser($id){
         if($id > 0){
-            $this->_idEnt = $id;
+            $this->_idUser = $id;
+        }
+    }
+
+    public function setPrenom($prenom){
+        if(is_string($prenom)){
+            $this->_prenom= $prenom;
         }
     }
 
@@ -34,9 +40,10 @@ class User {
             $this->_nom= $nom;
         }
     }
-    public function setPrenom($prenom){
-        if(is_string($prenom)){
-            $this->_prenom= $prenom;
+    
+    public function setAdresse($adresse){
+        if(is_string($adresse)){
+            $this->_adresse = $adresse;
         }
     }
 
@@ -46,13 +53,6 @@ class User {
         }
     }
 
-    public function setEmail($mail){
-        if(is_string($mail)){
-            $this->_email = $mail;
-        }
-    }
-
-
     public function getIdUser(){
         return $this->_idUser;
     }
@@ -61,12 +61,16 @@ class User {
         return $this->_nom;
     }
 
+    public function getPrenom(){
+        return $this->_prenom;
+    }
+
     public function getMdp(){
         return $this->_mdp;
     }
 
-    public function getEmail(){
-        return $this->_email;
+    public function getAdresse(){
+        return $this->_adresse;
     }
 }
 ?>
